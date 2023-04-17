@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Four Elements Puzzle</title>
+
+   <!--Script linking to A-Frame-->
+   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+   <!--Script linking to my custom script-->
+   <script src="js/script.js"></script>
+
+   <!--Script linking to my movement controls-->
+   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@436d40c/dist/aframe-extras.min.js"></script>
+
+   <!--Script linking to my 3D models-->
+   <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: #FAFAFA">
+        <a-assets>
+            <img id="Water Room" src="assets/Water.jpeg">
+            <img id="Earth Room" src="assets/Earth.jpeg">
+            <img id="Fire Room" src="assets/Fire.jpeg">
+            <img id="Air Room" src="assets/Air.jpeg">
+            <img id="Sky Roof" src="assets/SkyRoof.jpeg">
+            <img id="Wave" src="assets/Wave.jpeg">
+            <img id="Candle" src="assets/Candle.jpeg">
+            <img id="Diamond" src="assets/Diamond.jpeg">
+            <img id="Tornado" src="assets/Tornado.jpeg">
+          </a-assets>
+    
+ <!-- Motion --> 
+    <a-entity id="rig" movement-controls="fly: true; speed: 0.5">
+        <a-entity camera
+          position="0 1 2"
+          rotation="0 0 0"
+          scale="1 1 1"
+          look-controls>
+        </a-entity>
+    </a-entity>
+
+
+        <!--Outer Wall-->
+        <a-entity id="Outer Wall" scale="1 8 1">
+           <a-box position="-11.850 0.510 0.420" rotation="0 0 0" scale="0.193 1.000 26.915" color="#4CC3D9" shadow></a-box>
+           <a-box position="12.686 0.510 0.420" rotation="0 0 0" scale="0.193 1.000 26.915" color="#4CC3D9" shadow></a-box>
+           <a-box position="0.419 0.510 13.745" rotation="0 90.000 0" scale="0.193 1.000 24.531" color="#4CC3D9" shadow></a-box>
+           <a-box position="0.407 0.510 -12.951" rotation="0 90.000 0" scale="0.193 1.000 24.354" color="#4CC3D9" shadow></a-box>
+        </a-entity>
+        
+        <!--Starting Room-->
+        <a-entity id="Starting Room" scale="0.254 4 0.254" position="0 0 0">
+            <a-box position="7.520 0.499 -13.858" rotation="0 90.000 0" scale="0.193 1.000 9.700" color="#4CC3D9" shadow></a-box>
+            <a-box position="-7.321 0.499 -13.858" rotation="0 90.000 0" scale="0.193 1.000 9.700" color="#4CC3D9" shadow></a-box>
+            <a-box position="0.048 0.819 -13.927" rotation="0 0 0" scale="5.178 0.351 0.293" color="#4CC3D9"></a-box>
+
+            <a-box position="7.520 0.499 15.730" rotation="0 90.000 0" scale="0.193 1.000 9.700" color="#4CC3D9" shadow></a-box>
+            <a-box position="-7.321 0.499 15.717" rotation="0 90.000 0" scale="0.193 1.000 9.700" color="#4CC3D9" shadow></a-box>
+            <a-box position="0.048 0.819 15.696" rotation="0 0 0" scale="5.178 0.351 0.293" color="#4CC3D9"></a-box>
+            
+            <a-box position="-11.981 0.489 -8.247" rotation="0 -180.000 0" scale="0.193 1.000 11.439" color="#4CC3D9" shadow></a-box>
+            <a-box position="-11.981 0.489 9.921" rotation="0 -180.000 0" scale="0.193 1.000 11.439" color="#4CC3D9" shadow></a-box>
+            <a-box position="-11.929 0.809 0.893" rotation="0 90.000 0" scale="7.177 0.351 0.293" color="#4CC3D9"></a-box>
+            
+            <a-box position="12.414 0.499 10.081" rotation="0 180.000 0" scale="0.193 1.000 11.439" color="#4CC3D9" shadow></a-box>
+            <a-box position="12.414 0.499 -8.306" rotation="0 180.000 0" scale="0.193 1.000 11.439" color="#4CC3D9" shadow></a-box>
+            <a-box position="12.365 0.809 0.893" rotation="0 90.000 0" scale="7.177 0.351 0.293" color="#4CC3D9"></a-box>    
+        </a-entity>
+
+        <!--Water Room-->
+        <a-entity id="Water Room" scale="0.254 4 0.254" position="0 0 -7.561">
+            <a-box position="0.363 0.429 -16.332" rotation="0 90.000 0" scale="0.193 1.000 26.312" src="assets/Water.jpeg"></a-box> 
+            <a-box position="-11.981 0.489 -0.024" rotation="0 -180.000 0" scale="0.193 1.000 32.590" src="assets/Water.jpeg"></a-box>
+            <a-box position="12.404 0.489 -0.148" rotation="0 180.000 0" scale="0.193 1.000 31.746" src="assets/Water.jpeg"></a-box>    
+        </a-entity>
+
+        <!--Wave Box-->
+            <a-box id="Wave" src="assets/Wave.jpeg"></a-box>
+
+        
+    <!--Earth Room-->
+        <a-entity id="Earth Room" scale="0.254 4 0.254" position="6.233 0 0">
+            <a-box position="1.729 0.499 -13.848" rotation="0 90.000 0" scale="0.193 1.000 27.843" src="assets/Earth.jpeg"></a-box>
+            <a-box position="0.921 0.499 15.717" rotation="0 90.000 0" scale="0.193 1.000 25.676" src="assets/Earth.jpeg"></a-box>
+            <a-box position="13.741 0.489 0.961" rotation="0 180.000 0" scale="0.193 1.000 29.781" src="assets/Earth.jpeg"></a-box>     
+        </a-entity>
+
+        <!--Diamond Box-->
+        <a-box id="Diamond" src="assets/Diamond.jpeg"></a-box>
+
+
+        <!--Fire Room-->
+        <a-entity id="Fire Room" scale="0.254 4 0.254" position="0 0 7.567">
+            <a-box position="0.628 0.499 16.844" rotation="0 90.000 0" scale="0.193 1.000 25.146" src="assets/Fire.jpeg"></a-box>
+            <a-box position="-11.981 0.489 1.305" rotation="0 -180.000 0" scale="0.193 1.000 31.124" src="assets/Fire.jpeg"></a-box>
+            <a-box position="12.414 0.499 1.649" rotation="0 180.000 0" scale="0.193 1.000 30.965" src="assets/Fire.jpeg"></a-box>  
+        </a-entity>
+
+        <!--Candle Box-->
+         <a-box id="Candle" src="assets/Candle.jpeg"></a-box>   
+
+        <!--Air Room-->
+        <a-entity id="Air Room" scale="0.254 4 0.254" position="-6.213 0 0">
+            <a-box position="-1.467 0.499 -13.858" rotation="0 90.000 0" scale="0.193 1.000 28.612" src="assets/Air.jpeg"></a-box>
+            <a-box position="-1.617 0.499 15.730" rotation="0 90.000 0" scale="0.193 1.000 28.004" src="assets/Air.jpeg"></a-box>
+            <a-box position="-15.732 0.479 0.961" rotation="0 -180.000 0" scale="0.193 1.000 30.607" src="assets/Air.jpeg"></a-box>
+        </a-entity>
+
+        <!--Tornado Box-->
+        <a-box id="Tornado" src="assets/Tornado.jpeg"></a-box>   
+
+        
+        <a-box position="0 4.185 0" rotation="0 0 0" scale="20.668 0.314 26.161" src="assets/SkyRoof.jpeg"></a-box>
+        
+
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="600" height="600" color="#7BC8A4" shadow></a-plane>
+
+        <a-text id="scoreText" value="Welcome to the Avatar Puzzle!" position="-1.395 1.582 -1.756" color="black"></a-text>
+
+        <a-text id="scoreText" value="The moon is my mother, The sea is my dad. I have a million brothers. When I reach land, I'm dead. What am I? " position="-1.395 1.582 -7.616" color="black"></a-text>
+
+        <a-text id="scoreText" value="I was carried into a dark room, and set on fire. I wept, and then my head was cut off. What am I?" position="1.993 1.582 9.917" rotation="-180.000 -19.232 -180.000" color="black"></a-text>
+
+        <a-text id="scoreText" value="I may be hard, I may be rough, Bound in the round to claim a love. What am I?" position="7.001 1.567 -1.756" rotation="180.000 -85.217 180.000" color="black"></a-text>
+
+        <a-text id="scoreText" value="I'm tall and twisted; Narrow and fast; I'm there for a moment, But my devastation lasts. What am I?" position="-7.845 1.582 2.133" rotation="-180.000 85.857 -180.000" color="white"></a-text>
+        
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
+    </a-scene>
+
+    
+</body>
+</html>
